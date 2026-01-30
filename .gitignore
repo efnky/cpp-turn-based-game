@@ -1,0 +1,13 @@
+# CMake build folders
+cmake-build-*/
+build/
+
+# IDE files
+.idea/
+
+# macOS
+.DS_Store
+
+# outputs
+*.o
+*.out
