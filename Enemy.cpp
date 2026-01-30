@@ -20,8 +20,12 @@ void Enemy::setHp(int hp) {
     this->hp = (hp < 0) ? 0 : hp;
 }
 
-void Enemy::attack(Player& player, int dmg) {
+void Enemy::attackPlayer(Player& player, int dmg) {
     player.takeDamage(dmg);
+}
+
+void Enemy::takeDamage(int dmg) {
+    this->hp = (hp - dmg < 0) ? 0 : hp - dmg;
 }
 
 std::string Enemy::toString() const {

@@ -1,6 +1,8 @@
 #pragma once
 #include <string>
 
+class Enemy;
+
 class Player {
 
 private:
@@ -16,6 +18,8 @@ public:
     [[nodiscard]] int getHp() const;
 
     void takeDamage(int dmg);
+
+    void attackEnemy(Enemy& enemy, int dmg);
 
     [[nodiscard]] std::string toString() const;
 };

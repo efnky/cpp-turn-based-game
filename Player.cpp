@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "Player.h"
+#include "Enemy.h"
 
 Player::Player() : name("Gladiator"), hp(100) {}
 
@@ -17,6 +18,10 @@ int Player::getHp() const {
 
 void Player::takeDamage(int dmg) {
     this->hp = (hp - dmg < 0) ? 0 : hp - dmg;
+}
+
+void Player::attackEnemy(Enemy &enemy, int dmg) {
+    enemy.takeDamage(dmg);
 }
 
 std::string Player::toString() const {

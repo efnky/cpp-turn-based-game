@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
-#include "Player.h"
+
+class Player;
 
 class Enemy {
 
@@ -17,7 +18,9 @@ public:
 
     void setHp(int hp);
 
-    void attack(Player& player, int dmg);
+    void attackPlayer(Player& player, int dmg);
+
+    void takeDamage(int dmg);
 
     [[nodiscard]] std::string toString() const;
 
