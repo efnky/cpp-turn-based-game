@@ -1,11 +1,12 @@
 #include <iostream>
 #include <thread>
 #include "Character.h"
-
+#include "Player.h"
+#include "Enemy.h"
 // TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 
-Character player("Gladiator",100);
-Character enemy("Champion",500);
+Player player(100);
+Enemy enemy(500);
 
 int main() {
 

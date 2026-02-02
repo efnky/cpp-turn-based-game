@@ -1,21 +1,24 @@
 #pragma once
-
 #include <string>
 
 class Character {
-
+private:
     std::string name;
     int hp;
 
-    public:
+public:
     Character(std::string name, int hp);
+    virtual ~Character() = default;
 
+    // getters
     [[nodiscard]] std::string getName() const;
     [[nodiscard]] int getHp() const;
+
     void setHp(int hp);
-    void attack(Character& character, int dmg);
     void takeDamage(int dmg);
-    [[nodiscard]] std::string toString() const;
+
+    virtual void attack(Character& other, int dmg);
+    virtual std::string toString() const;
 
 };
 
