@@ -1,27 +1,14 @@
 #pragma once
 #include <string>
+#include "Character.h"
 
 class Player;
 
-class Enemy {
-
-    std::string name;
-    int hp;
-
+class Enemy: public Character {
 public:
     Enemy();
     Enemy(int hp);
 
-    [[nodiscard]] std::string getName() const;
-
-    [[nodiscard]] int getHp() const;
-
-    void setHp(int hp);
-
-    void attackPlayer(Player& player, int dmg);
-
-    void takeDamage(int dmg);
-
-    [[nodiscard]] std::string toString() const;
+    [[nodiscard]] std::string toString() const override;
 
 };
