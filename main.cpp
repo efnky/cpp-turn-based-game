@@ -1,13 +1,11 @@
 #include <iostream>
 #include <thread>
-
-#include "Player.h"
-#include "Enemy.h"
+#include "Character.h"
 
 // TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 
-Player player(100);
-Enemy enemy(500);
+Character player("Gladiator",100);
+Character enemy("Champion",500);
 
 int main() {
 
@@ -15,10 +13,10 @@ int main() {
     std::cout << player.toString() << std::endl;
 
     while ((player.getHp() > 0) and (enemy.getHp() > 0)) {
-        enemy.attackPlayer(player,10);
+        enemy.attack(player,10);
         std::cout << "Enemy attacks => " << std::endl <<
             enemy.toString() << std::endl << player.toString() << std::endl;
-        player.attackEnemy(enemy, 20);
+        player.attack(enemy, 20);
         std::cout << "Player attacks => " << std::endl <<
             enemy.toString() << std::endl << player.toString() << std::endl;
     }
