@@ -1,6 +1,6 @@
-#include <iostream>
 #include <string>
 #include "Enemy.h"
+#include "Character.h"
 
 Enemy::Enemy() : Character("Champion", 100) {}
 
