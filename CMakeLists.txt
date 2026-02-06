@@ -6,4 +6,6 @@ set(CMAKE_CXX_STANDARD 20)
 add_executable(turn_based_game main.cpp
         Player.h Player.cpp
         Enemy.cpp Enemy.h
-        Character.cpp Character.h)
+        Character.cpp Character.h
+        CombatController.cpp
+        CombatController.h)
