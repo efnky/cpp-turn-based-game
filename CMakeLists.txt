@@ -8,4 +8,5 @@ add_executable(turn_based_game main.cpp
         Enemy.cpp Enemy.h
         Character.cpp Character.h
         CombatController.cpp
-        CombatController.h)
+        CombatController.h
+        ICombatAbilitySet.h)
