@@ -1,5 +1,6 @@
 #pragma once
 #include "Character.h"
+#include "PlayerAbilitySet.h"
 
 class Character;
 
@@ -11,16 +12,19 @@ enum class TurnState {
 
 class CombatController {
 private:
-    Character& a;
+    Player& a;
+    PlayerAbilitySet abilitiesA;
+
     Character& b;
+
     TurnState turnState;
 
 public:
-    CombatController(Character& a, Character& b);
+    CombatController(Player& a, Character& b);
 
-    std::pair<Character&, Character&> getCharacters();
+    std::pair<Player&, Character&> getCharacters();
 
-    TurnState getTurnState() const;
+    [[nodiscard]] TurnState getTurnState() const;
 
     void runCombat();
 };

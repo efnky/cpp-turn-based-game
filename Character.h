@@ -13,11 +13,15 @@ public:
     // getters
     [[nodiscard]] std::string getName() const;
     [[nodiscard]] int getHp() const;
+    void setHp(int hp);
+
     [[nodiscard]] bool isDead() const;
+
     void takeDamage(int dmg);
 
     virtual void attack(Character& other, int dmg);
-    virtual std::string toString() const;
+    virtual void heal(int amount);
 
+    virtual std::string toString() const;
 };
 
