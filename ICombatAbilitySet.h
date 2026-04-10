@@ -11,10 +11,6 @@ public:
     virtual void weaponAttack(Character& other) = 0;
     virtual void specialAttack(Character& other) = 0;
 
-    // Defending
-    // virtual void block(Character& other) = 0;
-    // virtual void dodge(Character& other) = 0;
-
     // Healing
     virtual void heal() = 0;
 };

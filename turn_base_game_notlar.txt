@@ -1,0 +1,17 @@
+Turn Base Game 
+
+Yapılanlar: 
+	- Oyuncu ve düşman classları yapıldı (Her ikisinin can değeri/ HP'si var).
+	- Oyunun gerçekleştiği main kuruldu.
+	- Düşman oyuncuya hasar verebiliyor.
+	- Oyuncunun düşmana hasar verebilmesi.
+	- Hasar verme işlemini bir döngü haline getirme
+	- Bu döngü birinin canının sıfıra inene kadar devam etmesini sağlamak.
+	- Make one character class that is the parent of Player and Enemy
+	- Make a combat state class that owns a single mutex.
+	- Multithreading ile bu döngünün sıralı bir şekilde gerçekleşmesini sağlamak
+	- Create an ability interface class that includes multiple types of attacking options
+	- Create classes that implement the interface for Player and NPCs.
+	
+Yapılacaklar:
+	-

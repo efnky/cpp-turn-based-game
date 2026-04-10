@@ -15,10 +15,6 @@ public:
     void weaponAttack(Character& other) override;
     void specialAttack(Character& other) override;
 
-    // Defending
-    //void block(Character& other) override;
-    //void dodge(Character& other) override;
-
     // Healing
     void heal() override;
 };

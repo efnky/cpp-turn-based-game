@@ -26,13 +26,11 @@ void CombatController::runCombat() {
                 std::cout << "Choose an ability:" << std::endl;
                 std::cout << "1. Weapon Attack" << std::endl;
                 std::cout << "2. Special Attack" << std::endl;
-                // std::cout << "3. Block" << std::endl;
-                // std::cout << "4. Dodge" << std::endl;
-                std::cout << "5. Heal" << std::endl;
+                std::cout << "3. Heal" << std::endl;
 
                 // Enter choice
                 int choice = 0;
-                while (choice < 1 || choice > 5) {
+                while (choice < 1 || choice > 3) {
                     std::cout << "> ";
                     std::cin >> choice;
                 }
@@ -41,9 +39,8 @@ void CombatController::runCombat() {
                 switch (choice) {
                     case 1: abilitiesA.weaponAttack(b); break;
                     case 2: abilitiesA.specialAttack(b); break;
-                    // case 3: abilitiesA.block(b); break;
-                    // case 4: abilitiesA.dodge(b); break;
-                    case 5: abilitiesA.heal(); break;
+                    case 3: abilitiesA.heal(); break;
+                    default: assert(false && "Unexpected CombatController::runCombat");
                 }
 
                 // Verification after ability
